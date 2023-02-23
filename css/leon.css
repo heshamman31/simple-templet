@@ -51,6 +51,11 @@ body{
     letter-spacing:-3px;
     z-index: 1;
 }
+@media(max-width:450px){
+    .special-heading h2{
+        font-size: 80px;
+    }
+}
 .special-heading p{
     font-size: 20px;
     text-align: center;
@@ -152,6 +157,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 285px;
 }
 .landing .intro-text h1{
     color: var(--main-color);
@@ -165,7 +171,7 @@ body{
     font-size: 19px;
 }
 @media (max-width: 585px ){
-    .landing .intro-text {
+    .landing .intro-text h1{
         max-width: auto;
     }
 }
@@ -198,7 +204,15 @@ body{
     color: var(--secondary-color);
     line-height: 1.6;
 }
-@media(m)
+@media (max-width: 992px){
+    .features .container{
+        justify-content: space-around;
+    }
+    .features .feat{
+        margin-bottom: 15px;
+    }
+}
+
 /* end features section */
 /* start services section */
 .services{
@@ -248,7 +262,11 @@ margin-bottom: 20px;
     height:360px ;
     z-index: 2;
 }
-
+@media (max-width: 1200px){
+    .services .container .all-services .col .image{
+        display: none;
+    }
+}
 /* end services section */
 /* start portfolio */
 .portfolio{
@@ -295,6 +313,7 @@ margin-bottom: 20px;
     justify-content: space-between;
     margin-top: 80px;
 }
+
 .about .container .text-col :first-child{
     line-height: 2;
     font-weight: 700;
@@ -342,6 +361,36 @@ margin-bottom: 20px;
     border-bottom: 76px solid var(--main-color);
     z-index: 1;
 }
+@media(max-width:1200px){
+    .about .container .image-col::after {
+        width: 65px;
+        right: -89px;
+    }
+}
+@media(max-width:992px){
+    .about .container{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+    .about .container .image-col{
+    position: relative;
+    width: 250px;
+    height: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    }
+    .about .container .text-col{
+        margin-top: 30px;
+    }
+}
+@media(max-width:450px){
+    .about .container .image-col::after {
+        width: 46px;
+        right: -65px;
+    }
+}
 /* end About */
 /* start contact */
 .contact {
@@ -377,6 +426,14 @@ margin-bottom: 20px;
 .contact .container .social i{
     margin-left: 10px;
     color: var(--secondary-color);
+}
+@media(max-width:450px){
+    .contact .container .label{
+        font-size: 28px;
+    }
+    .contact .container .link{
+        font-size: 30px;
+    }
 }
 /* end contact */
 /* start footer */
